@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url('keyboard_backlight_red_136083_1280x720.jpg'); /* eğer image içinde olsaydı (...img/dosya ismi) şeklinde yazılacaktı)*/ 
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+span{
+    color: rgb(196, 19, 19);
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+nav ul li a{ 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+nav ul li a:hover{
+    background-color:rgb(120, 5, 5);
+    transition: 0.5s;
+    color:white;
+}
+.btn{
+    text-decoration: none;
+    color:white;
+    border: 1px solid rgb(120, 5, 5);
+    padding: 10px 30px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden; 
+    /* content in görünmemesinin sebebi*/
+    border-radius: 6px;
+}
+.btn::before{
+    content: "9.99 $";
+    font-weight: bold;
+    color: rgb(120, 5, 5);
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover::before{
+    transform: translateY(0);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: white;
+    margin: 10px 0px ;
+    font-size: 50px;
+}
+h3{
+    color: white;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+h4{
+    color: rgb(196, 19, 19);
+    margin: 10px 0px;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+.newslatter form{
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    border: 2px solid rgb(196, 19, 19);
+    outline: none;
+    border-radius: 18px;
+    padding: 15px 130px 14px 15px ;
+}
+.newslatter form a{
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color:white;
+    font-size: 13px;
+    border-radius: 18px;
+    background-color:rgb(95, 2, 2);
+    box-shadow: 0px 0px 5px rgb(2, 2, 2), 0px 0px 12px rgb(143, 142, 142);
+    top: 5px;
+    right: 6px;
+}
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: rgb(17, 16, 16);
+}
+.about img{
+    width: 450px;
+    height: auto;
+}
+.main{
+    width: 1110px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text{
+    width: 550px;
+}
+.about-text h2{
+    color: white;
+    font-size: 45px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.about-text h5{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.about-text p{
+    color: rgb(196, 19, 19);
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    position: relative;
+    color: white;
+    background-color: rgb(95, 2, 2) ;
+    text-transform: uppercase;
+    font-size: 22px;
+    cursor: pointer;
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 30px;/* çizgilerin uzunluğu*/
+    width: 30px;
+    border-top: 4px solid grey;
+    border-left: 4px solid grey;
+    transition: all 0.25s;
+}
+button::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    height: 30px;/* çizgilerin uzunluğu*/
+    width: 30px;
+    border-bottom: 4px solid grey;
+    border-right: 4px solid grey;
+    transition: all 0.25s;
+}
+button:hover:before,
+button:hover::after{
+    height: 100%;
+    width: 100%;
+}
+.service {
+    width: 100%;
+    padding: 100px 0px;
+    background-color:rgb(17, 14, 14);
+}
+.title h2{
+    font-size: 40px;
+    color: white;
+    margin: 30px auto;
+    width: 1110px;
+    text-align: center;
+}
+.box{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 400px;
+}
+.card{
+    height: 300px;
+    width: 300px;
+    padding: 25px 20px ;
+    background-color: rgb(41, 38, 38);
+    margin: 15px;
+    position: relative;
+    border-radius: 6px;
+    text-align: center;
+    overflow: hidden;
+}
+.card i{
+    display: block;
+    color: rgb(196, 19, 19);
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 25px;
+}
+h5{
+    margin-bottom: 15px;
+    color: white;
+    font-size: 18px;
+}
+.pra p{
+    font-size: 15px;
+    color:black;
+    font-weight: 500;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.pra p a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
